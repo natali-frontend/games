@@ -19,6 +19,7 @@
 .home {
   padding: 10px 0 15px;
   background: #e9eaee;
+
   a {
     &:active {
       opacity: 0.8;
@@ -39,7 +40,6 @@
       color: $color-base;
       padding: 3px;
       margin: 0 -19px;
-
     }
 
     &-contacts {
@@ -94,13 +94,6 @@
       box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.5);
       margin: 0 0 30px -25px;
       padding: 0 16px 0 30px;
-
-      h2 {
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 1.875;
-        color: $color-base;
-      }
 
       a {
         font-size: 18px;
