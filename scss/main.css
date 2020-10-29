@@ -39,6 +39,9 @@ a {
   padding: 10px 0 15px;
   background: #e9eaee;
 }
+.home a:active {
+  opacity: 0.8;
+}
 .home-games {
   background: #fff;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);

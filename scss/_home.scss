@@ -19,6 +19,11 @@
 .home {
   padding: 10px 0 15px;
   background: #e9eaee;
+  a {
+    &:active {
+      opacity: 0.8;
+    }
+  }
 
   &-games {
     background: $color-base;
@@ -158,7 +163,7 @@
     span {
       padding: 0;
     }
-  ;
+
   }
   .home {
     &-games {
