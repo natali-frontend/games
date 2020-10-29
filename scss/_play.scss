@@ -72,8 +72,8 @@
         a {
           font-size: 16px;
           font-weight: 700;
+          line-height: 1.5;
           color: #878787;
-
         }
       }
     }
@@ -129,16 +129,17 @@
 
     &-games {
       display: flex;
+      flex-wrap: wrap;
 
       &-item {
         display: flex;
         flex-direction: column;
-        text-align: center;
         box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
         border: 1px solid rgba(0, 0, 0, .125);
         border-radius: 3px;
         width: 24%;
         margin: 0 20px 15px 0;
+        text-align: center;
 
         img {
           border-radius: 3px 3px 0 0;
@@ -155,6 +156,101 @@
           &:hover {
             text-decoration: underline;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .play {
+    &-content {
+      &-games {
+        justify-content: space-between;
+
+        &-item {
+          width: 49%;
+          margin: 0 0 45px 0;
+
+          &:last-child {
+            margin: 0 0 15px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 979px) {
+  .alignment {
+    span {
+      padding: 0;
+    }
+
+  }
+  .play {
+    &-content {
+      &-contacts {
+        .hiden {
+          display: none;
+        }
+
+        a {
+          margin: 0 5px 5px 2px;
+        }
+
+        img {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .play {
+    &-content {
+      &-name {
+        h1 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .play {
+    &-content {
+      &-games {
+        flex-direction: column;
+        align-items: center;
+
+        &-item {
+          width: 100%;
+          margin: 0 0 45px;
+
+          &:last-child {
+            margin: 0 0 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .play {
+    &-content {
+      &-name {
+        h1 {
+          font-size: 28px;
+        }
+      }
+
+      &-description {
+        p {
+          font-size: 14px;
         }
       }
     }
