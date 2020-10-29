@@ -16,4 +16,13 @@ img {
 
 a {
   text-decoration: none;
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.5;
 }
