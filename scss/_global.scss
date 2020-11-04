@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "HelveticaNeueCyr", sans-serif;
+  //font-family: "HelveticaNeueCyr", sans-serif;
 }
 
 .container {
@@ -24,6 +24,9 @@ a {
     opacity: 0.8;
   }
 }
+ ul {
+   list-style: none;
+ }
 
 .home-games-contacts, .play-content-contacts, .listing-content-contacts {
   display: flex;
