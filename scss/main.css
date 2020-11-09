@@ -187,6 +187,57 @@ button:active {
   top: 0;
   transform: rotate(-45deg);
 }
+.kids-header .mega-menu {
+  background: #edf2f6;
+}
+.kids-header .mega-menu-inner {
+  display: flex;
+  background: #fff;
+  border-top: 10px solid #fa6342;
+  padding: 35px 20px 55px;
+}
+.kids-header .mega-menu-list {
+  padding: 0 30px;
+  width: 33%;
+  border-right: 1px solid #e5e5e5;
+}
+.kids-header .mega-menu-list:last-child {
+  border: none;
+}
+.kids-header .mega-menu-list:first-child {
+  padding-left: 0;
+}
+.kids-header .mega-menu-title {
+  margin-bottom: 35px;
+}
+.kids-header .mega-menu-title h4 {
+  color: #fa6342;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.kids-header .mega-menu .list-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.kids-header .mega-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.kids-header .mega-menu-item .active {
+  border-left: 2px solid #fa6342;
+  margin-right: -10px;
+  padding-left: 5px;
+}
+.kids-header .mega-menu-item a {
+  font-size: 16px;
+  color: #959ab5;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
 .kids-inner {
   background: #edf2f6;
   padding: 20px 0 75px;
@@ -229,6 +280,14 @@ button:active {
 }
 .kids-inner .inner-games .games-menu {
   display: none;
+  max-width: 100%;
+}
+.kids-inner .inner-games .games-menu .sidebar-menu {
+  padding: 20px;
+}
+.kids-inner .inner-games .games-menu .sidebar-menu h4 {
+  margin-left: -20px;
+  padding-left: 20px;
 }
 .kids-inner .inner-games .games-list {
   background: #fff;
@@ -331,7 +390,7 @@ button:active {
   margin-right: 5px;
 }
 .kids-inner .inner-sidebar {
-  width: 330px;
+  max-width: 330px;
 }
 .kids-inner .inner-sidebar .sidebar-title {
   border-bottom: 1px solid #e5e5e5;
@@ -378,11 +437,17 @@ button:active {
   width: 10px;
 }
 .kids-inner .inner-sidebar .sidebar-ad {
-  padding: 0 15px;
+  background: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5.008px;
+  padding: 15px;
 }
 .kids-inner .inner-sidebar .sidebar-ad-image {
   display: flex;
   margin-bottom: 15px;
+}
+.kids-inner .inner-sidebar .sidebar-ad-image:last-child {
+  margin-bottom: 0;
 }
 .kids-welcome .welcome-title {
   background: #34465d;
@@ -497,19 +562,19 @@ button:active {
   text-align: center;
   color: #fff;
 }
-.kids-footer .footer-bottom a {
+.kids-footer .footer-bottom .arrow {
   position: fixed;
   right: 20px;
   bottom: 40px;
   z-index: 10;
 }
-.kids-footer .footer-bottom a:hover {
+.kids-footer .footer-bottom .arrow:hover {
   opacity: 0.9;
 }
-.kids-footer .footer-bottom a:active {
+.kids-footer .footer-bottom .arrow:active {
   opacity: 0.6;
 }
-.kids-footer .footer-bottom a img {
+.kids-footer .footer-bottom .arrow img {
   width: 37px;
 }
 
@@ -540,7 +605,6 @@ button:active {
   }
   .kids .inner-games .games-menu {
     display: block;
-    width: 100%;
   }
   .kids-welcome .welcome-title {
     padding: 35px;
@@ -620,8 +684,16 @@ button:active {
   .kids .inner-content .games-title .games-type {
     right: 15px;
   }
+  .kids .inner-content .games-menu .sidebar-menu {
+    padding: 15px;
+  }
+  .kids .inner-content .games-menu .sidebar-menu .sidebar-title h4 {
+    margin-left: -15px;
+    padding-left: 15px;
+    line-height: 1.6;
+  }
   .kids .inner-content .games-list {
-    padding: 20px 15px;
+    padding: 15px;
   }
   .kids .inner-content .games-list .games-list-title h4 {
     margin-left: -15px;
