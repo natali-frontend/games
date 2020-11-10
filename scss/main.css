@@ -264,8 +264,10 @@ button:active {
 .kids-inner .inner-games .games-title .games-type {
   display: flex;
   position: absolute;
+  width: 100px;
+  top: 50%;
   right: 20px;
-  bottom: 16px;
+  transform: translate(0, -50%);
   border: 2px solid #fa6342;
   border-radius: 3px;
 }
@@ -682,6 +684,7 @@ button:active {
     font-size: 18px;
   }
   .kids .inner-content .games-title .games-type {
+    width: 70px;
     right: 15px;
   }
   .kids .inner-content .games-menu .sidebar-menu {

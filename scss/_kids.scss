@@ -220,8 +220,10 @@
         .games-type {
           display:       flex;
           position:      absolute;
+          width:         100px;
+          top:           50%;
           right:         20px;
-          bottom:        16px;
+          transform:     translate(0, -50%);
           border:        2px solid $color-attention;
           border-radius: 3px;
 
@@ -788,6 +790,7 @@
         }
 
         .games-type {
+          width: 70px;
           right: 15px;
         }
       }
