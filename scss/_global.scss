@@ -1,18 +1,18 @@
 @import "variables";
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin:      0;
+  padding:     0;
+  box-sizing:  border-box;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  outline: none;
+  outline:     none;
 }
 
 .container {
   max-width: 1230px;
-  padding: 0 15px;
-  margin: 0 auto;
+  padding:   0 15px;
+  margin:    0 auto;
 }
 
 img {
@@ -21,7 +21,7 @@ img {
 
 a {
   text-decoration: none;
-  transition: .3s ease;
+  transition:      .3s ease;
 
   &:active {
     opacity: 0.7;
@@ -33,22 +33,22 @@ ul {
 }
 
 h1 {
-  font-size: 30px;
-  line-height: 1;
+  font-size:      30px;
+  line-height:    1;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: $color-base;
+  color:          $color-base;
 }
 
 h2 {
-  font-size: 24px;
+  font-size:   24px;
   font-weight: bold;
   line-height: 1;
 }
 
 h4 {
-  font-size: 18px;
-  color: $color-primary;
+  font-size:   18px;
+  color:       $color-primary;
   border-left: 2px solid $color-attention;
 }
 
@@ -65,12 +65,12 @@ p {
 }
 
 button {
-  display: flex;
+  display:     flex;
   align-items: center;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  transition: .2s ease;
+  background:  transparent;
+  border:      none;
+  cursor:      pointer;
+  transition:  .2s ease;
 
   &:hover {
     opacity: 0.8;

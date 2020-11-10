@@ -1,9 +1,9 @@
 @import "variables";
 
 @mixin flex-c-sb {
-  display: flex;
+  display:         flex;
   justify-content: space-between;
-  align-items: center;
+  align-items:     center;
 }
 
 
@@ -20,7 +20,7 @@
       }
 
       .header-ad {
-        width: 60.6%;
+        width:   60.6%;
         display: flex;
       }
     }
@@ -39,13 +39,13 @@
 
       .menu-item {
         a {
-          display: inline-block;
+          display:        inline-block;
           text-transform: uppercase;
-          font-size: 14px;
-          padding: 20px 25px;
-          color: $color-base;
-          transition: .3s ease;
-          border-top: 5px solid transparent;
+          font-size:      14px;
+          padding:        20px 25px;
+          color:          $color-base;
+          transition:     .3s ease;
+          border-top:     5px solid transparent;
 
           &:hover, &.active {
             background: #3b3b3b;
@@ -62,47 +62,47 @@
       }
 
       .btn {
-        background: $color-btn;
-        color: #272727;
-        padding: 20px 35px;
+        background:     $color-btn;
+        color:          #272727;
+        padding:        20px 35px;
         text-transform: uppercase;
-        font-size: 18px;
-        font-weight: bold;
+        font-size:      18px;
+        font-weight:    bold;
         letter-spacing: 0.3px;
-        transition: .3s ease;
+        transition:     .3s ease;
 
         &:hover {
           background: rgba(254, 191, 1, 0.8);
-          color: $color-base;
+          color:      $color-base;
         }
       }
 
       .burger {
-        display: none;
+        display:         none;
         justify-content: center;
-        align-items: center;
-        width: 32px;
-        height: 32px;
-        cursor: pointer;
+        align-items:     center;
+        width:           32px;
+        height:          32px;
+        cursor:          pointer;
 
         &:hover {
           opacity: .7;
         }
 
         span {
-          position: relative;
-          width: 80%;
-          height: 2px;
+          position:   relative;
+          width:      80%;
+          height:     2px;
           background: $color-base;
 
           &::after, &::before {
-            content: "";
-            position: absolute;
-            z-index: 1;
-            top: 6px;
-            left: 0;
-            width: 100%;
-            height: 2px;
+            content:    "";
+            position:   absolute;
+            z-index:    1;
+            top:        6px;
+            left:       0;
+            width:      100%;
+            height:     2px;
             background: $color-base;
           }
 
@@ -116,12 +116,12 @@
             background: transparent;
 
             &::before {
-              top: 0;
+              top:       0;
               transform: rotate(45deg);
             }
 
             &::after {
-              top: 0;
+              top:       0;
               transform: rotate(-45deg);
             }
           }
@@ -133,15 +133,15 @@
       background: $color-bg;
 
       &-inner {
-        display: flex;
+        display:    flex;
         background: $color-base;
         border-top: 10px solid $color-attention;
-        padding: 35px 20px 55px;
+        padding:    35px 20px 55px;
       }
 
       &-list {
-        padding: 0 30px;
-        width: 33%;
+        padding:      0 30px;
+        width:        33%;
         border-right: 1px solid $color-border;
 
         &:last-child {
@@ -157,36 +157,36 @@
         margin-bottom: 35px;
 
         h4 {
-          color: $color-attention;
-          border: none;
-          font-size: 16px;
-          font-weight: bold;
+          color:          $color-attention;
+          border:         none;
+          font-size:      16px;
+          font-weight:    bold;
           text-transform: uppercase;
         }
       }
 
       .list-content {
-        display: flex;
+        display:         flex;
         justify-content: space-between;
-        align-items: center;
+        align-items:     center;
       }
 
       &-item {
-        display: flex;
+        display:        flex;
         flex-direction: column;
-        align-items: center;
+        align-items:    center;
 
         .active {
-          border-left: 2px solid $color-attention;
+          border-left:  2px solid $color-attention;
           margin-right: -10px;
           padding-left: 5px;
         }
 
         a {
-          font-size: 16px;
-          color: $color-text;
+          font-size:     16px;
+          color:         $color-text;
           margin-bottom: 20px;
-          line-height: 1.1;
+          line-height:   1.1;
         }
       }
     }
@@ -194,40 +194,40 @@
 
   &-inner {
     background: $color-bg;
-    padding: 20px 0 75px;
+    padding:    20px 0 75px;
 
     .inner-content {
       display: flex;
     }
 
     .inner-games {
-      width: 70%;
+      width:        70%;
       margin-right: 30px;
 
       .games-menu {
-        display: none;
+        display:   none;
         max-width: 100%;
         .sidebar-menu {
           padding: 20px;
           h4 {
-            margin-left: -20px;
+            margin-left:  -20px;
             padding-left: 20px;
           }
         }
       }
 
       .games-contacts {
-        display: flex;
+        display:         flex;
         justify-content: center;
-        flex-wrap: wrap;
-        background: $color-base;
-        border-radius: 5.008px;
-        margin-bottom: 20px;
-        padding: 20px 0;
-        box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
+        flex-wrap:       wrap;
+        background:      $color-base;
+        border-radius:   5.008px;
+        margin-bottom:   20px;
+        padding:         20px 0;
+        box-shadow:      0 3px 7px 0 rgba(0, 0, 0, 0.35);
 
         .alignment {
-          display: flex;
+          display:     flex;
           align-items: center;
 
           span {
@@ -236,69 +236,69 @@
         }
 
         a {
-          display: inline-block;
-          font-size: 10.5px;
-          line-height: 1.9;
-          background: #222222;
-          padding: 3px;
-          margin: 0 2px 0;
-          color: $color-base;
-          transition: all 0.2s ease-in-out;
-          border: 2px solid transparent;
+          display:       inline-block;
+          font-size:     10.5px;
+          line-height:   1.9;
+          background:    #222222;
+          padding:       3px;
+          margin:        0 2px 0;
+          color:         $color-base;
+          transition:    all 0.2s ease-in-out;
+          border:        2px solid transparent;
           border-radius: 4px;
 
           &:hover {
-            transform: translate(0, -4px);
+            transform:       translate(0, -4px);
             text-decoration: none;
           }
 
           &:active, &:focus {
-            transform: translate(0, -4px);
-            border: 2px solid rgba(0, 0, 0, 0.7);
+            transform:     translate(0, -4px);
+            border:        2px solid rgba(0, 0, 0, 0.7);
             border-radius: 3px;
-            background: rgba(34, 34, 34, 0.8);
+            background:    rgba(34, 34, 34, 0.8);
           }
         }
 
         img {
-          width: 20px;
-          height: 20px;
+          width:        20px;
+          height:       20px;
           margin-right: 5px;
         }
       }
 
       .games-game {
-        padding: 20px;
-        background: $color-base;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
+        padding:       20px;
+        background:    $color-base;
+        box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius: 5.008px;
         margin-bottom: 20px;
-        display: flex;
+        display:       flex;
       }
 
       .games-title {
         margin-bottom: 20px;
         border-bottom: 1px solid $color-border;
-        padding: 0 0 10px;
+        padding:       0 0 10px;
 
         h4 {
-          margin-left: -20px;
+          margin-left:  -20px;
           padding-left: 20px;
-          line-height: 1.4;
+          line-height:  1.4;
         }
       }
 
       .games-admin {
-        padding: 20px;
-        background: $color-base;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
+        padding:       20px;
+        background:    $color-base;
+        box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius: 5.008px;
         margin-bottom: 20px;
 
         .games-title {
-          display: flex;
+          display:         flex;
           justify-content: space-between;
-          align-items: center;
+          align-items:     center;
 
           .games-btn {
             button {
@@ -314,7 +314,7 @@
             }
 
             img {
-              width: 33px;
+              width:        33px;
               margin-right: 5px;
             }
           }
@@ -324,7 +324,7 @@
           @include flex-c-sb;
 
           .admin-person {
-            display: flex;
+            display:     flex;
             align-items: center;
 
             .person-image {
@@ -339,11 +339,11 @@
       }
 
       .games-list {
-        background: $color-base;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
+        background:    $color-base;
+        box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius: 5.008px;
-        padding: 20px;
-        margin: 0 auto 20px;
+        padding:       20px;
+        margin:        0 auto 20px;
 
         &-content {
           display: flex;
@@ -351,12 +351,12 @@
       }
 
       .games-item {
-        display: flex;
+        display:        flex;
         flex-direction: column;
-        margin: 0 20px 0 0;
-        border: 1px solid #ede9e9;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
-        border-radius: 4px;
+        margin:         0 20px 0 0;
+        border:         1px solid #ede9e9;
+        box-shadow:     0 0 10px 0 rgba(0, 0, 0, 0.10);
+        border-radius:  4px;
 
         &:last-child {
           margin: 0;
@@ -364,18 +364,18 @@
 
         &-image {
           margin-right: 20px;
-          display: flex;
-          width: 100%;
+          display:      flex;
+          width:        100%;
 
           img {
-            object-fit: contain;
+            object-fit:    contain;
             border-radius: 4px 4px 0 0;
           }
         }
 
         &-description {
-          padding: 15px;
-          width: 100%;
+          padding:    15px;
+          width:      100%;
           text-align: center;
 
           h6 {
@@ -397,104 +397,104 @@
         }
 
         img {
-          width: 25px;
+          width:        25px;
           margin-right: 5px;
         }
       }
 
       .games-tags {
-        padding: 20px;
-        background: $color-base;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
+        padding:       20px;
+        background:    $color-base;
+        box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius: 5.008px;
         margin-bottom: 20px;
 
         .tags-list {
-          display: flex;
+          display:     flex;
           align-items: center;
-          flex-wrap: wrap;
+          flex-wrap:   wrap;
 
         }
 
         .tags-item {
-          margin-right: 6px;
+          margin-right:  6px;
           margin-bottom: 25px;
 
           a {
-            font-size: 15px;
-            color: #8488a0;
-            background: $color-base;
-            padding: 5px 10px;
-            border: 1px solid #e1e1e4;
+            font-size:     15px;
+            color:         #8488a0;
+            background:    $color-base;
+            padding:       5px 10px;
+            border:        1px solid #e1e1e4;
             border-radius: 30px;
 
             &:hover {
               background: $color-attention;
-              color: $color-base;
-              border: none;
+              color:      $color-base;
+              border:     none;
             }
           }
 
           .tags-active {
             background: $color-attention;
-            color: $color-base;
-            border: none;
+            color:      $color-base;
+            border:     none;
 
           }
         }
       }
 
       .games-description {
-        padding: 20px;
-        background: $color-base;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
+        padding:       20px;
+        background:    $color-base;
+        box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius: 5.008px;
         margin-bottom: 20px;
       }
     }
 
     .inner-sidebar {
-      max-width: 330px;
+      max-width: 320px;
 
       .sidebar-title {
         border-bottom: 1px solid $color-border;
-        padding: 0 0 10px;
+        padding:       0 0 10px;
         margin-bottom: 15px;
 
         h4 {
-          color: $color-secondary;
-          font-size: 14px;
+          color:          $color-secondary;
+          font-size:      14px;
           text-transform: uppercase;
-          margin-left: -15px;
-          padding-left: 15px;
-          line-height: 1.8;
+          margin-left:    -15px;
+          padding-left:   15px;
+          line-height:    1.8;
         }
 
       }
 
       .sidebar-menu {
-        background: $color-base;
+        background:    $color-base;
         margin-bottom: 20px;
-        padding: 15px;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
+        padding:       15px;
+        box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius: 5.008px;
 
         &-item {
-          border-bottom: 1px solid $color-border;
+          border-bottom:  1px solid $color-border;
           padding-bottom: 15px;
-          margin-bottom: 20px;
+          margin-bottom:  20px;
 
           &:last-child {
             padding-bottom: 0;
-            margin-bottom: 5px;
-            border-bottom: none;
+            margin-bottom:  5px;
+            border-bottom:  none;
           }
         }
 
         a {
           @include flex-c-sb;
-          color: $color-secondary;
-          font-size: 15px;
+          color:         $color-secondary;
+          font-size:     15px;
           padding-right: 40px;
 
           &:hover {
@@ -508,13 +508,13 @@
       }
 
       .sidebar-ad {
-        padding: 15px;
-        background: $color-base;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
+        padding:       15px;
+        background:    $color-base;
+        box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius: 5.008px;
 
         &-image {
-          display: flex;
+          display:       flex;
           margin-bottom: 15px;
           &:last-child {
             margin-bottom: 0;
@@ -542,11 +542,11 @@
 
         a {
           border-right: 1px solid $color-primary;
-          padding: 0 10px;
-          line-height: 1;
+          padding:      0 10px;
+          line-height:  1;
 
           &:last-child {
-            padding: 0 0 0 10px;
+            padding:      0 0 0 10px;
             border-right: none;
           }
 
@@ -558,24 +558,24 @@
     }
 
     .footer-bottom {
-      padding: 15px 0 20px;
+      padding:    15px 0 20px;
       background: #34465d;
 
       .footer-logo {
-        width: 160px;
+        width:  160px;
         margin: 0 auto 15px;
       }
 
       p {
         text-align: center;
-        color: $color-base;
+        color:      $color-base;
       }
 
       .arrow {
         position: fixed;
-        right: 20px;
-        bottom: 40px;
-        z-index: 10;
+        right:    20px;
+        bottom:   40px;
+        z-index:  10;
 
         &:hover {
           opacity: 0.9;
@@ -610,12 +610,12 @@
     }
 
     .inner-games {
-      width: 100%;
+      width:        100%;
       margin-right: 0;
 
       .games-menu {
         display: block;
-        width: 100%;
+        width:   100%;
       }
     }
 
@@ -634,10 +634,14 @@
         .menu-list {
           display: none;
         }
-
         .burger {
           display: flex;
         }
+      }
+    }
+    .inner-games {
+      .games-list {
+        flex-direction: column;
       }
     }
   }
@@ -669,14 +673,14 @@
       }
 
       .games-list-content {
-        flex-wrap: wrap;
+        flex-wrap:       wrap;
         justify-content: center;
       }
 
       .games-item {
         flex-direction: column;
-        align-items: center;
-        margin: 0 0 20px;
+        align-items:    center;
+        margin:         0 0 20px;
 
         &-image, &-description {
           width: 100%;
@@ -701,7 +705,7 @@
       .footer-top {
         &-content {
           flex-direction: column-reverse;
-          text-align: center;
+          text-align:     center;
         }
 
         &-menu {
@@ -720,7 +724,7 @@
           padding: 0 5px;
 
           .btn {
-            padding: 15px 25px;
+            padding:   15px 25px;
             font-size: 14px;
           }
         }
@@ -732,9 +736,9 @@
 
       .games-title {
         h4 {
-          margin-left: -15px;
+          margin-left:  -15px;
           padding-left: 15px;
-          font-size: 16px;
+          font-size:    16px;
         }
       }
 
@@ -747,9 +751,9 @@
           padding: 15px;
           .sidebar-title {
             h4 {
-              margin-left: -15px;
+              margin-left:  -15px;
               padding-left: 15px;
-              line-height: 1.6;
+              line-height:  1.6;
             }
           }
         }
@@ -758,7 +762,7 @@
       .games-admin {
         .games-title {
           flex-direction: column;
-          align-items: flex-start;
+          align-items:    flex-start;
 
           h4 {
             margin-bottom: 15px;
@@ -791,8 +795,8 @@
           flex-direction: column;
 
           a {
-            margin: 0 0 15px;
-            border: none;
+            margin:  0 0 15px;
+            border:  none;
             padding: 0;
 
             &:last-child {
