@@ -27,18 +27,16 @@
 
     .header-menu {
       background: #272727;
-
+      position: relative;
       .menu-content {
         @include flex-c-sb;
         padding: 0 15px;
       }
-
       .menu-list {
         @include flex-c-sb;
       }
-
       .menu-item {
-        a {
+       > a {
           display:        inline-block;
           text-transform: uppercase;
           font-size:      14px;
@@ -46,7 +44,6 @@
           color:          $color-base;
           transition:     .3s ease;
           border-top:     5px solid transparent;
-
           &:hover, &.active {
             background: #3b3b3b;
             border-top: 5px solid $color-btn;
@@ -54,13 +51,12 @@
         }
 
         &.active {
-          a {
+          > a {
             background: #3b3b3b;
             border-top: 5px solid $color-btn;
           }
         }
       }
-
       .btn {
         background:     $color-btn;
         color:          #272727;
@@ -76,7 +72,6 @@
           color:      $color-base;
         }
       }
-
       .burger {
         display:         none;
         justify-content: center;
@@ -84,17 +79,14 @@
         width:           32px;
         height:          32px;
         cursor:          pointer;
-
         &:hover {
           opacity: .7;
         }
-
         span {
           position:   relative;
           width:      80%;
           height:     2px;
           background: $color-base;
-
           &::after, &::before {
             content:    "";
             position:   absolute;
@@ -128,10 +120,8 @@
         }
       }
     }
-
     .mega-menu {
       background: $color-bg;
-
       &-inner {
         display:    flex;
         background: $color-base;
@@ -223,8 +213,7 @@
         background:      $color-base;
         border-radius:   5.008px;
         margin-bottom:   20px;
-        padding:         20px 0;
-        box-shadow:      0 3px 7px 0 rgba(0, 0, 0, 0.35);
+        padding:         20px;
 
         .alignment {
           display:     flex;
@@ -268,12 +257,11 @@
       }
 
       .games-game {
+        display:       flex;
         padding:       20px;
         background:    $color-base;
-        box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius: 5.008px;
         margin-bottom: 20px;
-        display:       flex;
       }
 
       .games-title {
@@ -291,14 +279,11 @@
       .games-admin {
         padding:       20px;
         background:    $color-base;
-        box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius: 5.008px;
         margin-bottom: 20px;
 
         .games-title {
-          display:         flex;
-          justify-content: space-between;
-          align-items:     center;
+         @include flex-c-sb;
 
           .games-btn {
             button {
@@ -340,7 +325,6 @@
 
       .games-list {
         background:    $color-base;
-        box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius: 5.008px;
         padding:       20px;
         margin:        0 auto 20px;
@@ -355,7 +339,6 @@
         flex-direction: column;
         margin:         0 20px 0 0;
         border:         1px solid #ede9e9;
-        box-shadow:     0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius:  4px;
 
         &:last-child {
@@ -377,7 +360,11 @@
           padding:    15px;
           width:      100%;
           text-align: center;
-
+          a {
+            &:hover {
+              text-decoration: underline;
+            }
+          }
           h6 {
             margin-bottom: 15px;
           }
@@ -405,7 +392,6 @@
       .games-tags {
         padding:       20px;
         background:    $color-base;
-        box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius: 5.008px;
         margin-bottom: 20px;
 
@@ -447,7 +433,6 @@
       .games-description {
         padding:       20px;
         background:    $color-base;
-        box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius: 5.008px;
         margin-bottom: 20px;
       }
@@ -476,7 +461,6 @@
         background:    $color-base;
         margin-bottom: 20px;
         padding:       15px;
-        box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius: 5.008px;
 
         &-item {
@@ -510,7 +494,6 @@
       .sidebar-ad {
         padding:       15px;
         background:    $color-base;
-        box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.10);
         border-radius: 5.008px;
 
         &-image {
@@ -598,7 +581,7 @@
     &-header {
       .header-menu {
         .menu-item {
-          a {
+          > a {
             padding: 20px 15px;
           }
         }
@@ -636,6 +619,29 @@
         }
         .burger {
           display: flex;
+        }
+        .mobile-menu {
+          flex-direction: column;
+          align-items:    center;
+          padding: 15px 0 30px;
+          .menu-list {
+            display:        flex;
+            flex-direction: column;
+            align-items:    center;
+            margin-bottom:  15px;
+          }
+
+          .menu-item {
+            &.active {
+              > a {
+                background: none;
+                border-top: 5px solid transparent;
+              }
+            }
+          }
+          .burger {
+            align-self: flex-start;
+          }
         }
       }
     }

@@ -1,0 +1,320 @@
+@mixin flex-c-sb {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+}
+
+
+.header {
+  .header-top {
+    &-content {
+      @include flex-c-sb;
+      padding: 10px 15px;
+    }
+  }
+  .burger {
+    display:         none;
+    justify-content: center;
+    align-items:     center;
+    width:           23px;
+    height:          23px;
+    cursor:          pointer;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    span {
+      position:   relative;
+      width:      100%;
+      height:     3px;
+      background: $color-main;
+
+      &::after, &::before {
+        content:    "";
+        position:   absolute;
+        z-index:    1;
+        top:        7px;
+        left:       0;
+        width:      100%;
+        height:     3px;
+        background: $color-main;
+      }
+
+      &::before {
+        top: -7px;
+      }
+    }
+
+    &.active {
+      span {
+        background: transparent;
+
+        &::before {
+          top:       0;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          top:       0;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .header-logo {
+    width: 19.65%;
+    color: $color-main;
+    a {
+      @include flex-c-sb;
+    }
+    .logo-image {
+      width: 30.43%;
+      height: 60px;
+    }
+    .logo-name {
+      width: 65.21%;
+      height: 34px;
+      margin-top: 10px;
+    }
+  }
+  .header-ad {
+    width: 62.35%;
+    display: flex;
+  }
+  .header-menu {
+    background: #272727;
+    .menu-content {
+      @include flex-c-sb;
+      padding: 0 15px;
+      position: relative;
+    }
+    .menu-list {
+      @include flex-c-sb;
+    }
+    .menu-item {
+     > a {
+        display:        inline-block;
+        text-transform: uppercase;
+        font-size:      14px;
+        padding:        20px 25px;
+        color:          $color-base;
+        transition:     .3s ease;
+        border-top:     5px solid transparent;
+        &:hover, &.active {
+          background: #3b3b3b;
+          border-top: 5px solid $color-btn;
+        }
+      }
+      &.active {
+       > a {
+          background: #3b3b3b;
+          border-top: 5px solid $color-btn;
+        }
+      }
+      &:hover, &:active {
+        .mega-menu {
+          display: block;
+        }
+      }
+    }
+
+    .btn {
+      background:     $color-btn;
+      color:          #272727;
+      padding:        20px 35px;
+      text-transform: uppercase;
+      font-size:      18px;
+      font-weight:    bold;
+      letter-spacing: 0.3px;
+      transition:     .3s ease;
+
+      &:hover {
+        background: rgba(254, 191, 1, 0.8);
+        color:      $color-base;
+      }
+    }
+  }
+  .mega-menu {
+    background: $color-bg;
+    position: absolute;
+    z-index: 10;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    display: none;
+    &-inner {
+      display:    flex;
+      background: $color-base;
+      border-top: 10px solid $color-attention;
+      padding:    35px 20px 55px;
+    }
+
+    &-list {
+      padding:      0 30px;
+      width:        33%;
+      border-right: 1px solid $color-border;
+
+      &:last-child {
+        border: none;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    &-title {
+      margin-bottom: 35px;
+
+      h4 {
+        color:          $color-attention;
+        border:         none;
+        font-size:      16px;
+        font-weight:    bold;
+        text-transform: uppercase;
+      }
+    }
+
+    .list-content {
+      @include flex-c-sb;
+    }
+
+    &-item {
+      display:        flex;
+      flex-direction: column;
+      align-items:    center;
+
+      .active {
+        border-left:  2px solid $color-attention;
+        margin-right: -10px;
+        padding-left: 5px;
+      }
+
+      a {
+        font-size:     16px;
+        color:         $color-text;
+        margin-bottom: 20px;
+        line-height:   1.1;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  .header {
+    .header-menu {
+      .menu-item {
+       > a {
+          padding: 20px 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    .header-top {
+      &-content {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+      }
+      .burger {
+        display: flex;
+      }
+      .header-logo {
+        margin: 0 auto;
+        width: 150px;
+        .logo-image {
+          display: none;
+        }
+        .logo-name {
+          margin-top: 0;
+          width: 100%;
+        }
+      }
+      .header-ad {
+        display: none;
+      }
+    }
+    .header-menu {
+      width: 270px;
+      background: $color-base;
+      .menu-list {
+        display: none;
+      }
+      .mobile-menu {
+        flex-direction: column;
+        //align-items:    center;
+        padding:        15px 0 30px;
+        .menu-list {
+          display:        flex;
+          flex-direction: column;
+          //align-items:    center;
+          margin-bottom:  15px;
+        }
+
+        .menu-item {
+          &.active {
+            > a {
+              background: none;
+              border-top: 5px solid transparent;
+            }
+          }
+          a {
+            color: #272727;
+          }
+          .mega-menu {
+            //display: block;
+            &-inner {
+            flex-direction: column;
+          }
+          &-list {
+            width: 100%;
+          }
+            .list-content {
+              flex-direction: column;
+            }
+          }
+        }
+        .burger {
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .header {
+    .header-menu {
+      .btn {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .header {
+    .header-top-content {
+      display: flex;
+      justify-content: space-between;
+      .logo-name {
+        margin: 0;
+      }
+    }
+    .header-menu {
+      .menu-content {
+        padding: 0 5px;
+        .btn {
+          padding:   15px 25px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
