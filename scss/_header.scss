@@ -1,10 +1,5 @@
-@mixin flex-c-sb {
-  display:         flex;
-  justify-content: space-between;
-  align-items:     center;
-}
-
-
+@import "mixins";
+@import "variables";
 .header {
   .header-top {
     &-content {
@@ -240,37 +235,60 @@
       }
     }
     .header-menu {
-      width: 270px;
-      background: $color-base;
-      .menu-list {
+      .menu-content {
         display: none;
+        position: relative;
       }
       .mobile-menu {
+        width: 270px;
+        background: $color-base;
+        position: absolute;
+        top: 54px;
+        left: 15px;
+        z-index: 10;
+        display:        flex;
         flex-direction: column;
-        //align-items:    center;
+        align-items: normal;
         padding:        15px 0 30px;
         .menu-list {
-          display:        flex;
           flex-direction: column;
-          //align-items:    center;
           margin-bottom:  15px;
         }
 
         .menu-item {
+          width: 100%;
+          &:hover {
+            background: #272727;
+          }
           &.active {
+            background: #272727;
             > a {
-              background: none;
-              border-top: 5px solid transparent;
+              display: inline-block;
+              color: $color-base;
+              border-top: none;
+              background: #272727;
             }
           }
           a {
+            display: inline-block;
             color: #272727;
+            &:hover {
+              border: none;
+              color: $color-base;
+            }
           }
           .mega-menu {
-            //display: block;
+            background: $color-base;
             &-inner {
-            flex-direction: column;
-          }
+              flex-direction: column;
+              border: none;
+            }
+            &-list {
+              border: none;
+              text-align: center;
+              padding: 0;
+            }
+
           &-list {
             width: 100%;
           }

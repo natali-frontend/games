@@ -1,0 +1,97 @@
+@import "variables";
+.footer {
+  .footer-top {
+    padding: 20px 0;
+    &-content {
+      @include flex-c-sb;
+    }
+    p, a {
+      color: $color-primary;
+    }
+    &-menu {
+      display: flex;
+      a {
+        border-right: 1px solid $color-primary;
+        padding:      0 10px;
+        line-height:  1;
+        &:last-child {
+          padding:      0 0 0 10px;
+          border-right: none;
+        }
+        &:hover {
+          color: $color-attention;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    padding:    15px 0 20px;
+    background: #34465d;
+
+    .footer-logo {
+      width:  160px;
+      margin: 0 auto 15px;
+    }
+
+    p {
+      text-align: center;
+      color:      $color-base;
+    }
+
+    .arrow {
+      position: fixed;
+      right:    20px;
+      bottom:   40px;
+      z-index:  10;
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+
+      img {
+        width: 37px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    .footer-top {
+      &-content {
+        flex-direction: column-reverse;
+        text-align:     center;
+      }
+
+      &-menu {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 567px) {
+  .footer {
+    .footer-top {
+      &-menu {
+        flex-direction: column;
+
+        a {
+          margin:  0 0 15px;
+          border:  none;
+          padding: 0;
+
+          &:last-child {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
