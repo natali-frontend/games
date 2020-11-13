@@ -1,5 +1,12 @@
 @import "mixins";
 @import "variables";
+@media (any-hover: hover) {
+  .header .header-menu .menu-item:hover {
+    .mega-menu {
+      display: block;
+    }
+  }
+}
 .header {
   .header-top {
     &-content {
@@ -14,17 +21,14 @@
     width:           23px;
     height:          23px;
     cursor:          pointer;
-
     &:hover {
       opacity: .7;
     }
-
     span {
       position:   relative;
       width:      100%;
       height:     3px;
       background: $color-main;
-
       &::after, &::before {
         content:    "";
         position:   absolute;
@@ -35,12 +39,10 @@
         height:     3px;
         background: $color-main;
       }
-
       &::before {
         top: -7px;
       }
     }
-
     &.active {
       span {
         background: transparent;
@@ -57,7 +59,6 @@
       }
     }
   }
-
   .header-logo {
     width: 19.65%;
     color: $color-main;
@@ -65,31 +66,31 @@
       @include flex-c-sb;
     }
     .logo-image {
-      width: 30.43%;
+      width:  30.43%;
       height: 60px;
     }
     .logo-name {
-      width: 65.21%;
-      height: 34px;
+      width:      65.21%;
+      height:     34px;
       margin-top: 10px;
     }
   }
   .header-ad {
-    width: 62.35%;
+    width:   62.35%;
     display: flex;
   }
   .header-menu {
     background: #272727;
     .menu-content {
       @include flex-c-sb;
-      padding: 0 15px;
+      padding:  0 15px;
       position: relative;
     }
     .menu-list {
       @include flex-c-sb;
     }
     .menu-item {
-     > a {
+      > a {
         display:        inline-block;
         text-transform: uppercase;
         font-size:      14px;
@@ -103,18 +104,22 @@
         }
       }
       &.active {
-       > a {
+        > a {
           background: #3b3b3b;
           border-top: 5px solid $color-btn;
         }
       }
-      &:hover, &:active {
+      &:active {
         .mega-menu {
           display: block;
         }
       }
     }
-
+    .visible {
+      .mega-menu {
+        display: block;
+      }
+    }
     .btn {
       background:     $color-btn;
       color:          #272727;
@@ -132,37 +137,34 @@
     }
   }
   .mega-menu {
-    background: $color-bg;
-    position: absolute;
-    z-index: 10;
-    top: 62px;
-    left: 0;
-    width: 100%;
-    display: none;
+    background: transparent;
+    position:   absolute;
+    z-index:    10;
+    top:        62px;
+    left:       0;
+    width:      100%;
+    display:    none;
     &-inner {
       display:    flex;
       background: $color-base;
+      border:     1px solid #ede9e9;
       border-top: 10px solid $color-attention;
       padding:    35px 20px 55px;
+      box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
     }
-
     &-list {
       padding:      0 30px;
       width:        33%;
       border-right: 1px solid $color-border;
-
       &:last-child {
         border: none;
       }
-
       &:first-child {
         padding-left: 0;
       }
     }
-
     &-title {
       margin-bottom: 35px;
-
       h4 {
         color:          $color-attention;
         border:         none;
@@ -171,22 +173,17 @@
         text-transform: uppercase;
       }
     }
-
     .list-content {
       @include flex-c-sb;
     }
-
     &-item {
       display:        flex;
       flex-direction: column;
-      align-items:    center;
-
       .active {
         border-left:  2px solid $color-attention;
         margin-right: -10px;
         padding-left: 5px;
       }
-
       a {
         font-size:     16px;
         color:         $color-text;
@@ -200,7 +197,7 @@
   .header {
     .header-menu {
       .menu-item {
-       > a {
+        > a {
           padding: 20px 15px;
         }
       }
@@ -212,22 +209,22 @@
   .header {
     .header-top {
       &-content {
-        display: flex;
+        display:     flex;
         align-items: center;
-        padding: 10px 0;
+        padding:     10px 0;
       }
       .burger {
         display: flex;
       }
       .header-logo {
         margin: 0 auto;
-        width: 150px;
+        width:  150px;
         .logo-image {
           display: none;
         }
         .logo-name {
           margin-top: 0;
-          width: 100%;
+          width:      100%;
         }
       }
       .header-ad {
@@ -235,65 +232,100 @@
       }
     }
     .header-menu {
+      .btn {
+        width:          100%;
+        padding:        20px;
+        background:     #f8c246;
+        text-transform: none;
+        font-weight:    500;
+      }
       .menu-content {
-        display: none;
+        display:  none;
         position: relative;
       }
       .mobile-menu {
-        width: 270px;
-        background: $color-base;
-        position: absolute;
-        top: 54px;
-        left: 15px;
-        z-index: 10;
+        width:          270px;
+        background:     $color-base;
+        position:       absolute;
+        top:            54px;
+        left:           15px;
+        z-index:        10;
         display:        flex;
         flex-direction: column;
-        align-items: normal;
-        padding:        15px 0 30px;
+        align-items:    normal;
+        padding:        20px 0 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .075);
         .menu-list {
           flex-direction: column;
           margin-bottom:  15px;
         }
-
         .menu-item {
           width: 100%;
           &:hover {
             background: #272727;
+            > a {
+              color: $color-base;
+            }
           }
           &.active {
             background: #272727;
             > a {
-              display: inline-block;
-              color: $color-base;
+              display:    inline-block;
+              color:      $color-base;
               border-top: none;
               background: #272727;
             }
           }
-          a {
+          > a {
+            width:   100%;
+            padding: 20px;
             display: inline-block;
-            color: #272727;
+            color:   #272727;
             &:hover {
               border: none;
-              color: $color-base;
             }
           }
           .mega-menu {
             background: $color-base;
+            text-align: left;
+            top:        0;
+            position:   relative;
             &-inner {
               flex-direction: column;
-              border: none;
+              border:         none;
+              padding:        0;
+              box-shadow: none;
             }
             &-list {
-              border: none;
-              text-align: center;
-              padding: 0;
+              width:   100%;
+              border:  none;
+              padding: 20px 0 0;
             }
-
-          &-list {
-            width: 100%;
-          }
+            &-title {
+              padding:       0 5px;
+              margin-bottom: 25px;
+              h4 {
+                color:          #fece3e;
+                letter-spacing: 1px;
+                border-bottom:  1px solid $color-border;
+                padding-bottom: 15px;
+              }
+            }
+            &-item {
+              align-items: normal;
+              a {
+                color:         #27282c;
+                margin-bottom: 35px;
+                &:last-child {
+                  margin-bottom: 15px;
+                }
+              }
+            }
             .list-content {
               flex-direction: column;
+              text-align:     left;
+              align-items:    normal;
+              padding:        0 15px;
             }
           }
         }
@@ -304,8 +336,6 @@
     }
   }
 }
-
-
 @media screen and (max-width: 768px) {
   .header {
     .header-menu {
@@ -315,23 +345,13 @@
     }
   }
 }
-
 @media screen and (max-width: 567px) {
   .header {
     .header-top-content {
-      display: flex;
+      display:         flex;
       justify-content: space-between;
       .logo-name {
         margin: 0;
-      }
-    }
-    .header-menu {
-      .menu-content {
-        padding: 0 5px;
-        .btn {
-          padding:   15px 25px;
-          font-size: 14px;
-        }
       }
     }
   }

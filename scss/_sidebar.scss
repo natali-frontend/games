@@ -1,12 +1,11 @@
 @import "variables";
+@import "mixins";
 .inner-sidebar {
   max-width: 320px;
-
   .sidebar-title {
     border-bottom: 1px solid $color-border;
     padding:       0 0 10px;
     margin-bottom: 15px;
-
     h4 {
       color:          $color-secondary;
       font-size:      14px;
@@ -15,15 +14,12 @@
       padding-left:   15px;
       line-height:    1.8;
     }
-
   }
-
   .sidebar-menu {
     background:    $color-base;
     margin-bottom: 20px;
     padding:       15px;
     border-radius: 5.008px;
-
     &-item {
       border-bottom:  1px solid $color-border;
       margin-bottom:  20px;
@@ -33,22 +29,19 @@
         border-bottom:  none;
       }
     }
-
     .title {
       @include flex-c-sb;
       color:         $color-secondary;
       font-size:     15px;
       padding: 0 40px 15px 0;
-
+      cursor: pointer;
       &:hover {
         color: $color-attention;
       }
-
       img {
         width: 10px;
       }
     }
-
     .show {
       .submenu-list {
         display: block;
@@ -85,12 +78,10 @@
       }
     }
   }
-
   .sidebar-ad {
     background:    $color-base;
     border-radius: 5.008px;
     padding:       15px;
-
     &-image {
       display:       flex;
       margin-bottom: 15px;

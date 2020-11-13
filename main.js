@@ -24,8 +24,21 @@ buttonList.addEventListener("click", function () {
     }
 });
 
-const sidebarMenu = document.getElementsByClassName("submenu")[0];
-sidebarMenu.addEventListener("click", function () {
-    this.classList.toggle("show");
-});
+const sidebarMenu = document.getElementsByClassName("submenu");
+for (let i = 0; i < sidebarMenu.length; i++) {
+    sidebarMenu[i].addEventListener("click", function () {
+        this.classList.toggle("show");
+    });
+}
+
+const megaMenu = document.getElementsByClassName("menu-item");
+if (window.innerWidth < 992) {
+    for (let i = 0; i < megaMenu.length; i++) {
+        megaMenu[i].addEventListener("click", function () {
+            console.log(1);
+            this.classList.toggle("visible");
+        });
+    }
+}
+
 

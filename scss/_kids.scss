@@ -352,7 +352,6 @@
     .inner-games {
       width:        100%;
       margin-right: 0;
-
       .games-menu {
         display: block;
       }
@@ -378,7 +377,6 @@
         flex-wrap: wrap;
         justify-content: center;
       }
-
       .games-list {
         &.list {
           .games-item {
@@ -387,7 +385,6 @@
             &-image, &-description {
               width: 100%;
             }
-
             &-image {
               margin: 0;
 
@@ -395,14 +392,12 @@
                 border-radius: 4px 4px 0 0;
               }
             }
-
             &-description {
               padding: 15px;
             }
           }
         }
       }
-
       .games-item {
         margin: 0 0 20px;
       }
