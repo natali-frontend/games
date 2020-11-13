@@ -111,6 +111,47 @@ button:active {
   opacity: 0.5;
 }
 
+.like-container {
+  filter: url("#filter");
+}
+.like-container .material-icons {
+  position: absolute;
+  top: 49%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  font-family: "Material Icons", sans-serif;
+  font-size: 14px;
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+.like-container.heart .like-cnt {
+  opacity: 0.4;
+  background: transparent;
+}
+.like-container.heart i {
+  color: #f40000;
+  user-select: none;
+  font-size: 24px;
+}
+
+.like-cnt {
+  cursor: pointer;
+  background: #23d2e2;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 75px;
+  z-index: 10;
+}
+
+.like-btn {
+  color: #fff;
+}
+
 .kids-inner {
   background: #edf2f6;
   padding: 20px 0 75px;
@@ -300,15 +341,15 @@ button:active {
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
-}
-.kids-inner .inner-games .games-icons button {
   color: #959ab5;
 }
-.kids-inner .inner-games .games-icons .icons-image {
-  width: 20px;
+.kids-inner .inner-games .games-icons .like {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.kids-inner .inner-games .games-icons img {
-  width: 25px;
+.kids-inner .inner-games .games-icons .like-container {
   margin-right: 5px;
 }
 .kids-welcome .welcome-title {
@@ -597,16 +638,21 @@ button:active {
   justify-content: space-between;
   align-items: center;
 }
-.play-inner .inner-games .games-admin .games-title .games-btn button {
+.play-inner .inner-games .games-admin .games-title .games-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.play-inner .inner-games .games-admin .games-title .games-icons .like-container {
   margin-right: 25px;
 }
-.play-inner .inner-games .games-admin .games-title .games-btn button:last-child {
+.play-inner .inner-games .games-admin .games-title .games-icons .like-container:last-child {
   margin-right: 0;
 }
-.play-inner .inner-games .games-admin .games-title .games-btn .btn-chain {
+.play-inner .inner-games .games-admin .games-title .games-icons .btn-chain {
   margin-right: 30px;
 }
-.play-inner .inner-games .games-admin .games-title .games-btn img {
+.play-inner .inner-games .games-admin .games-title .games-icons img {
   width: 33px;
   margin-right: 5px;
 }
@@ -711,20 +757,20 @@ button:active {
 .play-inner .inner-games .games-item-description h6 {
   margin-bottom: 15px;
 }
-.play-inner .inner-games .games-btn {
+.play-inner .inner-games .games-icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
-}
-.play-inner .inner-games .games-btn button {
   color: #959ab5;
 }
-.play-inner .inner-games .games-btn .icons-image {
-  width: 20px;
+.play-inner .inner-games .games-icons .like {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.play-inner .inner-games .games-btn img {
-  width: 25px;
+.play-inner .inner-games .games-icons .like-container {
   margin-right: 5px;
 }
 .play-inner .inner-games .games-tags {

@@ -204,7 +204,6 @@
           padding:    15px;
           width:      100%;
           text-align: center;
-
           h6 {
             margin-bottom: 15px;
           }
@@ -214,22 +213,16 @@
           }
         }
       }
-
       .games-icons {
         @include flex-c-sb;
         max-width: 100%;
-
-        button {
-          color: $color-text;
-        }
-
-        .icons-image {
-          width: 20px;
-        }
-
-        img {
-          width:        25px;
-          margin-right: 5px;
+        color: $color-text;
+        .like {
+          font-size: 14px;
+          @include flex-c-sb;
+          &-container {
+            margin-right: 5px;
+          }
         }
       }
     }

@@ -91,3 +91,46 @@ button {
 }
 
 
+
+
+.like-container{
+  filter: url('#filter');
+  .material-icons {
+    position: absolute;
+    top: 49%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    font-family: 'Material Icons', sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+  &.heart {
+    .like-cnt {
+      opacity: .4;
+      background: transparent;
+    }
+    i {
+      color: #f40000;
+      user-select: none;
+      font-size: 24px;
+    }
+  }
+
+}
+.like-cnt{
+  cursor:        pointer;
+  background:    #23d2e2;
+  width:         24px;
+  height:        24px;
+  border-radius: 50%;
+  text-align:    center;
+  line-height:   75px;
+  z-index:       10;
+}
+.like-btn{
+  color: #fff;
+}
