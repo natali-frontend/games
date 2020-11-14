@@ -95,12 +95,17 @@
          @include flex-c-sb;
           .games-icons {
             @include flex-c-sb;
-            .like-container {
+            .like {
               margin-right: 25px;
-
+              &:first-child {
+                margin-right: 30px;
+              }
               &:last-child {
                 margin-right: 0;
               }
+            }
+            .like-container {
+              margin-right: 5px;
             }
             .btn-chain {
               margin-right: 30px;

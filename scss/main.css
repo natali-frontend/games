@@ -96,31 +96,15 @@ p {
   color: #959ab5;
 }
 
-button {
-  display: flex;
-  align-items: center;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-button:hover {
-  opacity: 0.8;
-}
-button:active {
-  opacity: 0.5;
-}
-
 .like-container {
   filter: url("#filter");
 }
 .like-container .material-icons {
   position: absolute;
-  top: 49%;
+  top: 45%;
   left: 52%;
   transform: translate(-50%, -50%);
   font-family: "Material Icons", sans-serif;
-  font-size: 14px;
   display: inline-block;
   white-space: nowrap;
   direction: ltr;
@@ -136,8 +120,42 @@ button:active {
   user-select: none;
   font-size: 24px;
 }
+.like-container.like-js i {
+  font-size: 15px;
+}
+.like-container.admin-like .like-cnt {
+  width: 32px;
+  height: 32px;
+}
+.like-container.admin-like i {
+  top: 48%;
+  font-size: 20px;
+}
+.like-container.dislike .like-cnt {
+  opacity: 0.4;
+  background: #ff3636;
+  width: 32px;
+  height: 32px;
+}
+.like-container.dislike i {
+  top: 50%;
+  right: 0;
+  font-size: 21px;
+  transform: scaleX(-1) translate(36%, -46%);
+}
+.like-container.chain-js .like-cnt {
+  opacity: 0.4;
+  background: #fa6342;
+  width: 32px;
+  height: 32px;
+}
+.like-container.chain-js i {
+  top: 48%;
+  font-size: 20px;
+}
 
 .like-cnt {
+  position: relative;
   cursor: pointer;
   background: #23d2e2;
   width: 24px;
@@ -643,11 +661,17 @@ button:active {
   justify-content: space-between;
   align-items: center;
 }
-.play-inner .inner-games .games-admin .games-title .games-icons .like-container {
+.play-inner .inner-games .games-admin .games-title .games-icons .like {
   margin-right: 25px;
 }
-.play-inner .inner-games .games-admin .games-title .games-icons .like-container:last-child {
+.play-inner .inner-games .games-admin .games-title .games-icons .like:first-child {
+  margin-right: 30px;
+}
+.play-inner .inner-games .games-admin .games-title .games-icons .like:last-child {
   margin-right: 0;
+}
+.play-inner .inner-games .games-admin .games-title .games-icons .like-container {
+  margin-right: 5px;
 }
 .play-inner .inner-games .games-admin .games-title .games-icons .btn-chain {
   margin-right: 30px;
