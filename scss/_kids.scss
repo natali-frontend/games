@@ -39,7 +39,12 @@
 
           .btn-grid, .btn-list {
             background: $color-bg;
-            width: 50%;
+            width:      50%;
+            cursor:     pointer;
+            border:     none;
+            &:hover, &:active  {
+              opacity: .7;
+            }
           }
 
           .btn-list {
@@ -146,56 +151,56 @@
         }
 
         &-image {
-          width: 100%;
-          position: relative;
-          z-index: 1;
+          width:      100%;
+          position:   relative;
+          z-index:    1;
           background: black;
 
           &::after, &::before {
-            content: "";
-            position: absolute;
-            z-index: 1;
-            top: 50%;
-            left: 50%;
-            cursor: pointer;
+            content:        "";
+            position:       absolute;
+            z-index:        1;
+            top:            50%;
+            left:           50%;
+            cursor:         pointer;
             pointer-events: none;
-            transform: translate(-50%, -50%) scale(1.4);
-            transition: 0.3s ease-in-out;
-            opacity: 0;
+            transform:      translate(-50%, -50%) scale(1.4);
+            transition:     0.3s ease-in-out;
+            opacity:        0;
           }
           &::after {
-            width: 31px;
-            height: 31px;
-            background-image: url("../images/play-button.svg");
+            width:             31px;
+            height:            31px;
+            background-image:  url("../images/play-button.svg");
             background-repeat: no-repeat;
           }
           &::before {
-            width:          51px;
-            height:         51px;
-            border:         4px solid $color-attention;
-            border-radius:  50%;
+            width:            51px;
+            height:           51px;
+            border:           4px solid $color-attention;
+            border-radius:    50%;
             transform-origin: center;
-            background:     rgba(0, 0, 0, 0.6);
+            background:       rgba(0, 0, 0, 0.6);
           }
           &:hover {
             &::after, &::before {
               transform: translate(-50%, -50%) scale(1);
-              opacity: 1;
+              opacity:   1;
             }
           }
           a {
-            display: flex;
+            display:  flex;
             overflow: hidden;
           }
 
           img {
             object-fit:    contain;
             border-radius: 4px 4px 0 0;
-            transition: .3s ease-in-out;
+            transition:    .3s ease-in-out;
 
             &:hover {
               transform: scale(1.2);
-              opacity: 0.4;
+              opacity:   0.4;
             }
           }
         }
@@ -209,14 +214,14 @@
           }
           p {
             font-family: "OpenSans", sans-serif;
-            display: none;
+            display:     none;
           }
         }
       }
       .games-icons {
         @include flex-c-sb;
         max-width: 100%;
-        color: $color-text;
+        color:     $color-text;
         .like {
           font-size: 14px;
           @include flex-c-sb;
@@ -238,7 +243,7 @@
       padding: 45px 0 30px;
 
       p {
-        font-family: "OpenSans", sans-serif;
+        font-family:   "OpenSans", sans-serif;
         color:         #666666;
         margin-bottom: 30px;
         line-height:   1.5;
@@ -312,7 +317,7 @@
 
         p {
           font-family: "OpenSans", sans-serif;
-          word-break: break-all;
+          word-break:  break-all;
         }
       }
     }
@@ -367,7 +372,7 @@
     }
     .inner-content {
       .games-list-content {
-        flex-wrap: wrap;
+        flex-wrap:       wrap;
         justify-content: center;
       }
       .games-list {

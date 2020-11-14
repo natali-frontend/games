@@ -103,6 +103,9 @@
               &:last-child {
                 margin-right: 0;
               }
+              &.link {
+                transform: rotate(-45deg);
+              }
             }
             .like-container {
               margin-right: 5px;
