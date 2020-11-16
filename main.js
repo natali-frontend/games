@@ -28,7 +28,6 @@ if (buttonGrid) {
 }
 
 
-
 const sidebarMenu = document.getElementsByClassName("submenu");
 for (let i = 0; i < sidebarMenu.length; i++) {
     sidebarMenu[i].addEventListener("click", function () {
@@ -36,14 +35,23 @@ for (let i = 0; i < sidebarMenu.length; i++) {
     });
 }
 
-    const megaMenu = document.getElementsByClassName("btn");
-if (window.innerWidth < 992) {
-    for (let i = 0; i < megaMenu.length; i++) {
-        megaMenu[i].addEventListener("click", function () {
-            this.classList.toggle("visible");
-        });
+const megaMenu = document.getElementsByClassName("btn");
+window.addEventListener('resize', function () {
+    if (window.innerWidth < 992) {
+        for (let i = 0; i < megaMenu.length; i++) {
+            megaMenu[i].addEventListener("click", function () {
+                this.classList.toggle("visible");
+            });
+        }
+    } else {
+        for (let i = 0; i < megaMenu.length; i++) {
+            megaMenu[i].addEventListener("click", function () {
+                this.classList.remove("visible");
+            });
+        }
     }
-}
+});
+
 
 var check_status = false;
 
