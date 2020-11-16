@@ -36,151 +36,160 @@ for (let i = 0; i < sidebarMenu.length; i++) {
     });
 }
 
-const megaMenu = document.getElementsByClassName("menu-item");
+    const megaMenu = document.getElementsByClassName("btn");
 if (window.innerWidth < 992) {
     for (let i = 0; i < megaMenu.length; i++) {
         megaMenu[i].addEventListener("click", function () {
-            console.log(1);
             this.classList.toggle("visible");
         });
     }
 }
 
-
-
-
 var check_status = false;
 
-$(".heart .like-cnt").click(function(){
+$(".heart .like-cnt").click(function () {
     var t1 = new TimelineLite();
     var t2 = new TimelineLite();
-    if(!check_status){
-        t1.set(this, {scale:0});
+    if (!check_status) {
         t1.set(this, {scale: 0});
-        t1.to(this, 0.6, {scale:1, opacity: 1,ease: Expo.easeOut});
-        t2.to(this, 0.65, {scale: 1, ease: Elastic.easeOut.config(1, 0.3)}, '+=0.2');
-        check_status=true;
-       var burst = new mojs.Burst({
-            parent:$( this ).parent(),
-            radius:   { 10: 30 },
-            count: 15,
-            angle:{0:30},
-            children: {
-                delay: 250,
-                duration: 700,
-                radius:{10: 0},
-                opacity:   1,
-                easing: 		mojs.easing.bezier(.08,.69,.39,.97)
-            }
-        });
-        burst.replay()
-    }
-    else{
-        t1.to(this, 1, {scale:1})
-            .to(this, 1, {scale:1, opacity: 0.4, ease: Power4.easeOut});
-        t1.timeScale(7);
-        check_status=false;
-    }
-
-});
-
-$(".like-js .like-cnt").click(function(){
-    var t1 = new TimelineLite();
-    var t2 = new TimelineLite();
-    if(!check_status){
-        t1.set(this, {scale:0});
         t1.set(this, {scale: 0});
-        t1.to(this, 0.6, {scale:1, background: 'rgba(0, 22, 255, 1)',ease: Expo.easeOut});
+        t1.to(this, 0.6, {scale: 1, opacity: 1, ease: Expo.easeOut});
         t2.to(this, 0.65, {scale: 1, ease: Elastic.easeOut.config(1, 0.3)}, '+=0.2');
-        check_status=true;
+        check_status = true;
         var burst = new mojs.Burst({
-            parent:$( this ).parent(),
-            radius:   { 10: 30 },
+            parent: $(this).parent(),
+            radius: {10: 30},
             count: 15,
-            angle:{0:30},
+            angle: {0: 30},
             children: {
                 delay: 250,
                 duration: 700,
-                radius:{10: 0},
-                fill:   [ 'rgba(0, 22, 255, 1)' ],
-                easing: 		mojs.easing.bezier(.08,.69,.39,.97)
+                radius: {10: 0},
+                opacity: 1,
+                easing: mojs.easing.bezier(.08, .69, .39, .97)
             }
         });
         burst.replay()
-    }
-    else{
-        t1.to(this, 1, {scale:1})
-            .to(this, 1, {scale:1, background: '#23d2e2', ease: Power4.easeOut});
+    } else {
+        t1.to(this, 1, {scale: 1})
+            .to(this, 1, {scale: 1, opacity: 0.4, ease: Power4.easeOut});
         t1.timeScale(7);
-        check_status=false;
+        check_status = false;
     }
 
 });
 
-$(".chain-js .like-cnt").click(function(){
+$(".like-js .like-cnt").click(function () {
     var t1 = new TimelineLite();
     var t2 = new TimelineLite();
-    if(!check_status){
-        t1.set(this, {scale:0});
+    if (!check_status) {
         t1.set(this, {scale: 0});
-        t1.to(this, 0.6, {scale:1,opacity: 1, background: '#fa6342',ease: Expo.easeOut});
+        t1.set(this, {scale: 0});
+        t1.to(this, 0.6, {scale: 1, background: 'rgba(0, 22, 255, 1)', ease: Expo.easeOut});
         t2.to(this, 0.65, {scale: 1, ease: Elastic.easeOut.config(1, 0.3)}, '+=0.2');
-        check_status=true;
+        check_status = true;
         var burst = new mojs.Burst({
-            parent:$( this ).parent(),
-            radius:   { 15: 35 },
+            parent: $(this).parent(),
+            radius: {10: 30},
             count: 15,
-            angle:{0:30},
+            angle: {0: 30},
             children: {
                 delay: 250,
                 duration: 700,
-                radius:{10: 0},
-                fill:   [ '#fa6342' ],
-                easing: 		mojs.easing.bezier(.08,.69,.39,.97)
+                radius: {10: 0},
+                fill: ['rgba(0, 22, 255, 1)'],
+                easing: mojs.easing.bezier(.08, .69, .39, .97)
             }
         });
         burst.replay()
-    }
-    else{
-        t1.to(this, 1, {scale:1})
-            .to(this, 1, {scale:1, opacity: 0.4, ease: Power4.easeOut});
+    } else {
+        t1.to(this, 1, {scale: 1})
+            .to(this, 1, {scale: 1, background: '#23d2e2', ease: Power4.easeOut});
         t1.timeScale(7);
-        check_status=false;
+        check_status = false;
     }
+
 });
 
-$(".dislike .like-cnt").click(function(){
+$(".chain-js .like-cnt").click(function () {
     var t1 = new TimelineLite();
     var t2 = new TimelineLite();
-    if(!check_status){
-        t1.set(this, {scale:0});
+    if (!check_status) {
         t1.set(this, {scale: 0});
-        t1.to(this, 0.6, {scale:1, opacity: 1, background: '#ff3636',ease: Expo.easeOut});
+        t1.set(this, {scale: 0});
+        t1.to(this, 0.6, {scale: 1, opacity: 1, background: '#fa6342', ease: Expo.easeOut});
         t2.to(this, 0.65, {scale: 1, ease: Elastic.easeOut.config(1, 0.3)}, '+=0.2');
-        check_status=true;
+        check_status = true;
         var burst = new mojs.Burst({
-            parent:$( this ).parent(),
-            radius:   { 10: 30 },
+            parent: $(this).parent(),
+            radius: {15: 35},
             count: 15,
-            angle:{0:30},
+            angle: {0: 30},
             children: {
                 delay: 250,
                 duration: 700,
-                radius:{10: 0},
-                fill:   [ '#ff3636' ],
-                easing: 		mojs.easing.bezier(.08,.69,.39,.97)
+                radius: {10: 0},
+                fill: ['#fa6342'],
+                easing: mojs.easing.bezier(.08, .69, .39, .97)
             }
         });
         burst.replay()
-    }
-    else{
-        t1.to(this, 1, {scale:1})
-            .to(this, 1, {scale:1, opacity: 0.4, ease: Power4.easeOut});
+    } else {
+        t1.to(this, 1, {scale: 1})
+            .to(this, 1, {scale: 1, opacity: 0.4, ease: Power4.easeOut});
         t1.timeScale(7);
-        check_status=false;
+        check_status = false;
+    }
+});
+
+$(".dislike .like-cnt").click(function () {
+    var t1 = new TimelineLite();
+    var t2 = new TimelineLite();
+    if (!check_status) {
+        t1.set(this, {scale: 0});
+        t1.set(this, {scale: 0});
+        t1.to(this, 0.6, {scale: 1, opacity: 1, background: '#ff3636', ease: Expo.easeOut});
+        t2.to(this, 0.65, {scale: 1, ease: Elastic.easeOut.config(1, 0.3)}, '+=0.2');
+        check_status = true;
+        var burst = new mojs.Burst({
+            parent: $(this).parent(),
+            radius: {15: 35},
+            count: 15,
+            angle: {0: 30},
+            children: {
+                delay: 250,
+                duration: 700,
+                radius: {10: 0},
+                fill: ['#ff3636'],
+                easing: mojs.easing.bezier(.08, .69, .39, .97)
+            }
+        });
+        burst.replay()
+    } else {
+        t1.to(this, 1, {scale: 1})
+            .to(this, 1, {scale: 1, opacity: 0.4, ease: Power4.easeOut});
+        t1.timeScale(7);
+        check_status = false;
     }
 
 });
+
+// Go to Top Button
+const toTop = document.getElementById('toTop');
+const showToTop = () => {
+    if (window.scrollY > 500) {
+        toTop.style.display = 'block';
+    } else {
+        toTop.style.display = 'none';
+    }
+};
+showToTop();
+document.addEventListener('scroll', function () {
+    showToTop();
+});
+
+
+
 
 
 

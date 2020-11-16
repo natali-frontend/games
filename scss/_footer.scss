@@ -25,7 +25,6 @@
       }
     }
   }
-
   .footer-bottom {
     padding:    15px 0 20px;
     background: #34465d;
@@ -34,26 +33,21 @@
       width:  160px;
       margin: 0 auto 15px;
     }
-
     p {
       text-align: center;
       color:      $color-base;
     }
-
     .arrow {
       position: fixed;
       right:    20px;
       bottom:   40px;
       z-index:  10;
-
       &:hover {
         opacity: 0.9;
       }
-
       &:active {
         opacity: 0.6;
       }
-
       img {
         width: 37px;
       }
