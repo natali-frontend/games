@@ -1,5 +1,5 @@
 const burger = document.getElementsByClassName("burger")[0];
-const menu = document.getElementsByClassName("menu-content")[0];
+const menu = document.getElementsByClassName("header-menu")[0];
 burger.addEventListener("click", function () {
     this.classList.toggle("active");
     menu.classList.toggle("mobile-menu")
