@@ -1394,7 +1394,8 @@ button:active {
   }
 }
 .inner-sidebar {
-  width: 330px;
+  max-width: 330px;
+  width: 100%;
 }
 .inner-sidebar .sidebar-title {
   border-bottom: 1px solid #e5e5e5;
@@ -1435,6 +1436,9 @@ button:active {
 }
 .inner-sidebar .sidebar-menu .title:hover {
   color: #fa6342;
+}
+.inner-sidebar .sidebar-menu .title:last-child {
+  padding: 0;
 }
 .inner-sidebar .sidebar-menu .title img {
   width: 10px;
