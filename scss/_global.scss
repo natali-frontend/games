@@ -56,11 +56,12 @@ h4 {
   border-left: 2px solid $color-attention;
 }
 
-p, h6 {
+p {
   font-size: 16px;
 }
 
 h6 {
+  font-size: 14px;
   color: #545454;
   &:hover {
     color: $color-attention;

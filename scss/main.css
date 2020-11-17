@@ -79,11 +79,12 @@ h4 {
   border-left: 2px solid #fa6342;
 }
 
-p, h6 {
+p {
   font-size: 16px;
 }
 
 h6 {
+  font-size: 14px;
   color: #545454;
 }
 h6:hover {
@@ -495,7 +496,7 @@ button:active {
 }
 
 @media screen and (max-width: 1100px) {
-  .kids p, .kids h6 {
+  .kids p {
     font-size: 14px;
   }
   .kids-welcome .welcome-title h2 {
@@ -892,7 +893,7 @@ button:active {
 }
 
 @media screen and (max-width: 1100px) {
-  .play p, .play h6 {
+  .play p {
     font-size: 14px;
   }
   .play .inner-content {
