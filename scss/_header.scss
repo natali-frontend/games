@@ -358,7 +358,7 @@
         width:           270px;
         background:      $color-base;
         flex-direction:  column;
-        align-items:     normal;
+        align-items:     flex-start;
         padding:         0;
         box-shadow:      0 2px 4px rgba(0, 0, 0, .075);
         overflow:        auto;
@@ -388,7 +388,7 @@
       }
       .menu-item {
         width: 100%;
-        align-items: normal;
+        align-items: flex-start;
         &:hover {
           > a {
             color: $color-base;
@@ -420,7 +420,7 @@
         .list-content {
           flex-direction: column;
           text-align:     left;
-          align-items:    normal;
+          align-items:    flex-start;
           padding:        0 15px;
         }
       }
