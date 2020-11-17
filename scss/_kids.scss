@@ -203,13 +203,15 @@
       .games-icons {
         @include flex-c-sb;
         max-width: 100%;
-        color:     $color-text;
-        .like {
-          font-size: 14px;
-          @include flex-c-sb;
-          &-container {
-            margin-right: 5px;
-          }
+        button {
+          color: $color-text;
+        }
+        .icons-image {
+          width: 20px;
+        }
+        img {
+          width:        25px;
+          margin-right: 5px;
         }
       }
     }

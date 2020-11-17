@@ -98,6 +98,21 @@ p {
   color: #959ab5;
 }
 
+button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+button:hover {
+  opacity: 0.8;
+}
+button:active {
+  opacity: 0.5;
+}
+
 .like-container {
   filter: url("#filter");
 }
@@ -114,7 +129,6 @@ p {
   -webkit-font-smoothing: antialiased;
 }
 .like-container.heart .like-cnt {
-  opacity: 0.4;
   background: transparent;
 }
 .like-container.heart i {
@@ -134,7 +148,6 @@ p {
   font-size: 20px;
 }
 .like-container.dislike .like-cnt {
-  opacity: 0.4;
   background: #ff3636;
   width: 32px;
   height: 32px;
@@ -146,7 +159,6 @@ p {
   transform: scaleX(-1) translate(36%, -46%);
 }
 .like-container.chain-js .like-cnt {
-  opacity: 0.4;
   background: #fa6342;
   width: 32px;
   height: 32px;
@@ -394,15 +406,15 @@ p {
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
+}
+.kids-inner .inner-games .games-icons button {
   color: #959ab5;
 }
-.kids-inner .inner-games .games-icons .like {
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.kids-inner .inner-games .games-icons .icons-image {
+  width: 20px;
 }
-.kids-inner .inner-games .games-icons .like-container {
+.kids-inner .inner-games .games-icons img {
+  width: 25px;
   margin-right: 5px;
 }
 .kids-welcome .welcome-title {
@@ -976,10 +988,10 @@ p {
   }
 }
 @media (any-hover: hover) {
-  .btn:hover .mega-menu {
+  .header .header-menu .btn:hover .mega-menu {
     display: block;
   }
-  .btn:hover > a {
+  .header .header-menu .btn:hover > a {
     background: rgba(254, 191, 1, 0.8);
     color: #fff;
   }
@@ -1094,7 +1106,6 @@ p {
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.3px;
-  transition: 0.3s ease;
 }
 .header .header-menu .btn.visible > a {
   color: #fff;
@@ -1114,6 +1125,9 @@ p {
   left: 0;
   width: 100%;
   display: none;
+}
+.header .mega-menu .container {
+  padding: 0;
 }
 .header .mega-menu-inner {
   display: flex;
@@ -1405,6 +1419,9 @@ p {
 }
 .inner-sidebar .sidebar-menu .title img {
   width: 10px;
+}
+.inner-sidebar .sidebar-menu .show .title img {
+  transform: rotate(180deg);
 }
 .inner-sidebar .sidebar-menu .show .submenu-list {
   display: block;

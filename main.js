@@ -72,7 +72,7 @@ $(".heart .like-cnt").click(function () {
         burst.replay()
     } else {
         t1.to(this, 1, {scale: 1})
-            .to(this, 1, {scale: 1, opacity: 0.4, ease: Power4.easeOut});
+            .to(this, 1, {scale: 1, opacity: 1, ease: Power4.easeOut});
         t1.timeScale(7);
         check_status = false;
     }
@@ -136,7 +136,7 @@ $(".chain-js .like-cnt").click(function () {
         burst.replay()
     } else {
         t1.to(this, 1, {scale: 1})
-            .to(this, 1, {scale: 1, opacity: 0.4, ease: Power4.easeOut});
+            .to(this, 1, {scale: 1, opacity: 1, ease: Power4.easeOut});
         t1.timeScale(7);
         check_status = false;
     }
@@ -167,7 +167,7 @@ $(".dislike .like-cnt").click(function () {
         burst.replay()
     } else {
         t1.to(this, 1, {scale: 1})
-            .to(this, 1, {scale: 1, opacity: 0.4, ease: Power4.easeOut});
+            .to(this, 1, {scale: 1, opacity: 1, ease: Power4.easeOut});
         t1.timeScale(7);
         check_status = false;
     }

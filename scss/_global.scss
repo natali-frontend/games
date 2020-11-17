@@ -75,6 +75,23 @@ p {
   color: $color-text;
 }
 
+button {
+  display:     flex;
+  align-items: center;
+  background:  transparent;
+  border:      none;
+  cursor:      pointer;
+  transition:  .2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
 .like-container{
   filter: url('#filter');
   .material-icons {
@@ -91,7 +108,6 @@ p {
   }
   &.heart {
     .like-cnt {
-      opacity: .4;
       background: transparent;
     }
     i {
@@ -117,7 +133,6 @@ p {
   }
   &.dislike {
     .like-cnt {
-      opacity: .4;
       background: #ff3636;
       width: 32px;
       height: 32px;
@@ -131,7 +146,6 @@ p {
   }
   &.chain-js {
     .like-cnt {
-      opacity: .4;
       background: #fa6342;
       width: 32px;
       height: 32px;

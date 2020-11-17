@@ -43,9 +43,15 @@
       }
     }
     .show {
+      .title {
+        img {
+          transform:  rotate(180deg);
+        }
+      }
       .submenu-list {
         display: block;
       }
+
     }
     .submenu-list {
       display: none;
