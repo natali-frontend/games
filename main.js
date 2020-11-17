@@ -35,12 +35,16 @@ for (let i = 0; i < sidebarMenu.length; i++) {
     });
 }
 
-    const megaMenu = document.getElementsByClassName("btn");
-    for (let i = 0; i < megaMenu.length; i++) {
-        megaMenu[i].addEventListener("click", function () {
-            this.classList.toggle("visible");
-        });
+const megaMenu = document.getElementsByClassName("btn");
+window.addEventListener('resize', function () {
+    if (window.innerWidth < 992) {
+        for (let i = 0; i < megaMenu.length; i++) {
+            megaMenu[i].addEventListener("click", function () {
+                this.classList.toggle("visible");
+            });
+        }
     }
+});
 
 var check_status = false;
 
