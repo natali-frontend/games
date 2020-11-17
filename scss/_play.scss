@@ -327,6 +327,11 @@
       display: none;
     }
     .inner-content {
+      .games-contacts {
+        img {
+          margin-right: 0;
+        }
+      }
       .games-game {
         padding: 15px;
       }
