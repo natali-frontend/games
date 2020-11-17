@@ -989,9 +989,6 @@ button:active {
   }
 }
 @media (any-hover: hover) {
-  .header .header-menu .btn:hover .mega-menu {
-    display: block;
-  }
   .header .header-menu .btn:hover > a {
     background: rgba(254, 191, 1, 0.8);
     color: #fff;
@@ -1376,7 +1373,7 @@ button:active {
   }
 }
 .inner-sidebar {
-  max-width: 330px;
+  width: 330px;
 }
 .inner-sidebar .sidebar-title {
   border-bottom: 1px solid #e5e5e5;

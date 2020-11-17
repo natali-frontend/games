@@ -3,9 +3,6 @@
 
 @media (any-hover: hover) {
   .header .header-menu .btn:hover {
-    .mega-menu {
-      display: block;
-    }
     > a {
       background: rgba(254, 191, 1, 0.8);
       color:      $color-base;
