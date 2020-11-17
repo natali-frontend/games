@@ -176,23 +176,3 @@ button {
   display: none;
 }
 
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 206, 64, 0.5);
-  border: none;
-  border-radius: 0;
-  opacity: .2;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #253861;
-}
-
-::-webkit-scrollbar-track {
-  background: #e1e1e1;
-  border: none;
-  border-radius: 0;
-}
