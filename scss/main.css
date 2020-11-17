@@ -1092,16 +1092,22 @@ button:active {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 .header .header-menu .btn.visible .mega-menu {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s linear;
+  transform: translate(0, 0);
 }
 .header .mega-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s linear;
+  transform: translate(0, 20px);
   background: transparent;
   position: absolute;
   z-index: 10;
   top: 62px;
   left: 0;
   width: 100%;
-  display: none;
 }
 .header .mega-menu .container {
   padding: 0;
