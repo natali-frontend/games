@@ -108,42 +108,39 @@
                 display: inline-block;
                 &-text {
                   visibility: hidden;
-                  width: 75px;
                   position: absolute;
-                  top: 100%;
-                  left: -16%;
+                  top: 50%;
+                  left: 50%;
                   z-index: 1;
+                  transform: translate(-28%, 40%);
                   background-color: $color-main;
                   color: $color-base;
                   text-align: center;
-                  padding: 10px 5px;
+                  padding: 10px;
                   border-radius: 4px;
                   margin-top: 10px;
+                  white-space: nowrap;
                 }
                 &:hover .tooltip-text {
                   visibility: visible;
                 }
               }
-              &.link {
-                transform: rotate(-45deg);
+            }
+            .chain-js {
+              .tooltip {
+                &-text {
+                  transform: translate(-49%, 40%);
+                }
               }
             }
             .dislike {
               .tooltip {
                 &-text {
-                  width: 92px;
-                  left: -45%;
+                  transform: translate(-30%, 40%);
                 }
               }
             }
-              .like-container {
-              margin-right: 5px;
-            }
-            .btn-chain {
-              margin-right: 30px;
-            }
-            img {
-              width:        33px;
+            .like-container {
               margin-right: 5px;
             }
           }

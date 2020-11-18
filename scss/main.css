@@ -170,7 +170,9 @@ button:active {
 }
 .like-container.chain-js i {
   top: 48%;
+  left: 50%;
   font-size: 20px;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .like-cnt {
@@ -710,36 +712,29 @@ button:active {
 }
 .play-inner .inner-games .games-admin .games-title .games-icons .like .tooltip-text {
   visibility: hidden;
-  width: 75px;
   position: absolute;
-  top: 100%;
-  left: -16%;
+  top: 50%;
+  left: 50%;
   z-index: 1;
+  transform: translate(-28%, 40%);
   background-color: #000;
   color: #fff;
   text-align: center;
-  padding: 10px 5px;
+  padding: 10px;
   border-radius: 4px;
   margin-top: 10px;
+  white-space: nowrap;
 }
 .play-inner .inner-games .games-admin .games-title .games-icons .like .tooltip:hover .tooltip-text {
   visibility: visible;
 }
-.play-inner .inner-games .games-admin .games-title .games-icons .like.link {
-  transform: rotate(-45deg);
+.play-inner .inner-games .games-admin .games-title .games-icons .chain-js .tooltip-text {
+  transform: translate(-49%, 40%);
 }
 .play-inner .inner-games .games-admin .games-title .games-icons .dislike .tooltip-text {
-  width: 92px;
-  left: -45%;
+  transform: translate(-30%, 40%);
 }
 .play-inner .inner-games .games-admin .games-title .games-icons .like-container {
-  margin-right: 5px;
-}
-.play-inner .inner-games .games-admin .games-title .games-icons .btn-chain {
-  margin-right: 30px;
-}
-.play-inner .inner-games .games-admin .games-title .games-icons img {
-  width: 33px;
   margin-right: 5px;
 }
 .play-inner .inner-games .games-admin .admin-content {

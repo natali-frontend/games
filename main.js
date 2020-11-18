@@ -27,7 +27,6 @@ if (buttonGrid) {
     });
 }
 
-
 const sidebarMenu = document.getElementsByClassName("submenu");
 for (let i = 0; i < sidebarMenu.length; i++) {
     sidebarMenu[i].addEventListener("click", function () {
@@ -101,6 +100,12 @@ $(".heart .like-cnt").click(function () {
 $(".like-js .like-cnt").click(function () {
     var t1 = new TimelineLite();
     var t2 = new TimelineLite();
+    if ( $('.like-js .link').text() === 'I like this') {
+        $('.like-js .link').html('Unlike');
+    } else {
+        $('.like-js .link').html('I like this');
+    }
+
     if (!check_status) {
         t1.set(this, {scale: 0});
         t1.set(this, {scale: 0});
@@ -133,6 +138,12 @@ $(".like-js .like-cnt").click(function () {
 $(".chain-js .like-cnt").click(function () {
     var t1 = new TimelineLite();
     var t2 = new TimelineLite();
+    if ( $('.chain-js .link').text() === 'Get link') {
+        $('.chain-js .link').html('Copied');
+    } else {
+        $('.chain-js .link').html('Get link');
+    }
+
     if (!check_status) {
         t1.set(this, {scale: 0});
         t1.set(this, {scale: 0});
@@ -206,6 +217,9 @@ showToTop();
 document.addEventListener('scroll', function () {
     showToTop();
 });
+
+const tooltip = document.getElementsByClassName("chain-js")[0];
+
 
 
 
