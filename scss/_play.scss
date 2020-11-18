@@ -103,11 +103,40 @@
               &:last-child {
                 margin-right: 0;
               }
+              .tooltip {
+                position: relative;
+                display: inline-block;
+                &-text {
+                  visibility: hidden;
+                  width: 75px;
+                  position: absolute;
+                  top: 100%;
+                  left: -16%;
+                  z-index: 1;
+                  background-color: $color-main;
+                  color: $color-base;
+                  text-align: center;
+                  padding: 10px 5px;
+                  border-radius: 4px;
+                  margin-top: 10px;
+                }
+                &:hover .tooltip-text {
+                  visibility: visible;
+                }
+              }
               &.link {
                 transform: rotate(-45deg);
               }
             }
-            .like-container {
+            .dislike {
+              .tooltip {
+                &-text {
+                  width: 92px;
+                  left: -45%;
+                }
+              }
+            }
+              .like-container {
               margin-right: 5px;
             }
             .btn-chain {
@@ -121,7 +150,6 @@
         }
         .admin-content {
           @include flex-c-sb;
-
           .admin-person {
             display:     flex;
             align-items: center;
@@ -149,7 +177,6 @@
         border-radius: 5.008px;
         padding:       20px;
         margin:        0 auto 20px;
-
         &-content {
           display: flex;
         }
