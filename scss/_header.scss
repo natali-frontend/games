@@ -6,14 +6,9 @@
     > a {
       color: $color-base;
     }
-    .mega-menu {
-      opacity:    1;
-      visibility: visible;
-      transition: 0.4s linear;
-      transform:  translate(0, 0);
-    }
   }
 }
+
 
 .header {
   .header-top {
@@ -162,23 +157,22 @@
         .mega-menu {
           opacity:    1;
           visibility: visible;
-          transition: 0.3s linear;
           transform:  translate(0, 0);
         }
       }
     }
   }
   .mega-menu {
-    opacity:    0;
-    visibility: hidden;
-    transition: 0.3s linear;
-    transform:  translate(0, 20px);
-    background: transparent;
-    position:   absolute;
-    z-index:    10;
-    top:        61px;
-    left:       0;
-    width:      100%;
+    opacity:        0;
+    visibility:     hidden;
+    transform:      translate(0, 20px);
+    background:     transparent;
+    position:       absolute;
+    z-index:        10;
+    top:            61px;
+    left:           0;
+    width:          100%;
+    pointer-events: none;
     .container {
       padding: 0;
     }
@@ -232,6 +226,41 @@
         }
       }
     }
+  }
+}
+
+
+@keyframes showMegaMenu {
+  0% {
+    opacity:        0;
+    visibility:     hidden;
+    transform:      translate(0, 20px);
+    pointer-events: initial;
+  }
+  100% {
+    opacity:        1;
+    visibility:     visible;
+    transform:      translate(0, 0);
+    pointer-events: initial;
+  }
+}
+
+
+@keyframes hideMegaMenu {
+  0% {
+    opacity:    1;
+    visibility: visible;
+    transform:  translate(0, 0);
+  }
+  70% {
+    opacity:    1;
+    visibility: visible;
+    transform:  translate(0, 0);
+  }
+  100% {
+    opacity:    0;
+    visibility: hidden;
+    transform:  translate(0, 20px);
   }
 }
 
@@ -330,6 +359,7 @@
           text-align: left;
           top:        0;
           position:   relative;
+          animation:  none;
           &-inner {
             flex-direction: column;
             border:         none;

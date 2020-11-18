@@ -35,16 +35,34 @@ for (let i = 0; i < sidebarMenu.length; i++) {
     });
 }
 
-const megaMenu = document.getElementsByClassName("btn");
-window.addEventListener('resize', function () {
+const megaMenuButton = document.getElementsByClassName("btn");
+const megaMenu = document.getElementsByClassName("mega-menu")[0];
+const showMegaMenu = () => {
     if (window.innerWidth < 992) {
-        for (let i = 0; i < megaMenu.length; i++) {
-            megaMenu[i].addEventListener("click", function () {
+        for (let i = 0; i < megaMenuButton.length; i++) {
+            megaMenuButton[i].addEventListener("click", function () {
                 this.classList.toggle("visible");
             });
         }
+    } else {
+        for (let i = 0; i < megaMenuButton.length; i++) {
+            megaMenuButton[i].addEventListener('mouseleave', function () {
+                megaMenu.style.animation = 'hideMegaMenu 1s ease-in-out'
+            })
+        }
+        for (let i = 0; i < megaMenuButton.length; i++) {
+            megaMenuButton[i].addEventListener('mousemove', function () {
+                megaMenu.style.animation = 'showMegaMenu 0.4s ease-in-out forwards'
+            })
+        }
+
     }
+};
+showMegaMenu();
+window.addEventListener('resize', function () {
+    showMegaMenu()
 });
+
 
 var check_status = false;
 
