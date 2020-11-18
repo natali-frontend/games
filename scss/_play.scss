@@ -289,13 +289,13 @@
             &:hover {
               background: $color-attention;
               color:      $color-base;
-              border:     none;
+              border:     1px solid transparent;
             }
           }
           .tags-active {
             background: $color-attention;
             color:      $color-base;
-            border:     none;
+            border:     1px solid transparent;
           }
         }
       }

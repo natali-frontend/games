@@ -881,12 +881,12 @@ button:active {
 .play-inner .inner-games .games-tags .tags-item a:hover {
   background: #fa6342;
   color: #fff;
-  border: none;
+  border: 1px solid transparent;
 }
 .play-inner .inner-games .games-tags .tags-item .tags-active {
   background: #fa6342;
   color: #fff;
-  border: none;
+  border: 1px solid transparent;
 }
 .play-inner .inner-games .games-description {
   padding: 20px;
